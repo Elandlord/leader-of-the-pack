@@ -17,6 +17,9 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
     'phone_number' => env('PHONE_NUMBER', '31612345678'),
+    'address' => env('ADDRESS', ''),
+    'postcode' => env('POSTCODE', ''),
+    'city' => env('CITY', ''),
 
     /*
     |--------------------------------------------------------------------------
