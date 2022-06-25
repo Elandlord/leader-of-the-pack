@@ -17,12 +17,8 @@
             <h1 class="pb-4 text-2xl font-bold">
                 Hondenuitlaatservice in Beetsterzwaag
             </h1>
-            <p class="pb-4">
+            <p class="pb-8">
                 Onze website is in aanbouw, maar we zijn er klaar voor!
-            </p>
-
-            <p class="pb-8 px-4 md:px-32">
-                Mijn naam is Jelle, en ik laat graag uw hond(en) uit. Hier moet nog meer tekst bij..
             </p>
 
             <div class="pb-4">
