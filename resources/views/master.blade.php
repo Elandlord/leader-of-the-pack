@@ -12,5 +12,6 @@
     @include('partials.nav')
     @yield('content')
     @include('partials.footer')
+    @include('partials.floating-action-button')
 </body>
 </html>

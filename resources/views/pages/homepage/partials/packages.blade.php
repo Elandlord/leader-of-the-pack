@@ -25,13 +25,9 @@
 
 <section class="container py-8 mx-auto">
     <div class="flex justify-center my-12">
-        <h3 class="font-bold text-3xl   ">Tarieven</h3>
+        <h3 class="font-bold text-3xl">Tarieven</h3>
     </div>
-    <div class="grid gap-x-8
-        grid-cols-1
-        md:grid-cols-{{ floor(count($packages) / 2) }}
-        lg:grid-cols-{{ count($packages) }}"
-    >
+    <div class="grid gap-x-8 grid-cols-1 lg:grid-cols-4">
         @forelse ($packages as $package)
             <div class="overflow-hidden bg-white shadow sm:rounded-lg">
                 <div class="px-4 py-5 sm:px-6">
