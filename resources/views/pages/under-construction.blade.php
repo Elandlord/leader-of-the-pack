@@ -17,8 +17,12 @@
             <h1 class="pb-4 text-2xl font-bold">
                 Hondenuitlaatservice in Beetsterzwaag
             </h1>
+            <p class="pb-4">
+                Onze website is nog onder constructie, maar we zijn er klaar voor!
+            </p>
+
             <p class="pb-8">
-                Onze website is in aanbouw, maar we zijn er klaar voor!
+                Download <a class="text-cyan-500 underline" href="/assets/files/uitlaattarieven.pdf">hier</a> alvast de tarieven.
             </p>
 
             <div class="pb-4">
@@ -27,7 +31,7 @@
                 </a>
             </div>
         </div>
-        <div class="py-8">
+        <div class="pt-8 pb-4">
             <div class="flex flex-col sm:flex-row text-center sm:text-left justify-center">
                 <a class="text-cyan-500" href="mailto:{{ config('mail.from.address') }}">
                     {{ config('mail.from.address') }}
@@ -40,6 +44,13 @@
                     {{ config('app.postcode') }},
                     {{ config('app.city') }}
                 </p>
+            </div>
+        </div>
+        <div class="pb-8">
+            <div class="flex flex-col sm:flex-row text-center sm:text-left justify-center">
+                <p>KVK: {{ config('app.chamber_of_commerce') }}</p>
+                <p class="px-4 hidden sm:block">|</p>
+                <p>BTW: {{ config('app.vat_number') }}</p>
             </div>
         </div>
     </div>

@@ -20,6 +20,8 @@ return [
     'address' => env('ADDRESS', ''),
     'postcode' => env('POSTCODE', ''),
     'city' => env('CITY', ''),
+    'chamber_of_commerce' => env('CHAMBER_OF_COMMERCE', ''),
+    'vat_number' => env('VAT_NUMBER', ''),
 
     /*
     |--------------------------------------------------------------------------
