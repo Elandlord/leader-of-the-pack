@@ -1,12 +1,19 @@
-<section class="container sticky mx-auto">
-    <div class="grid grid-cols-2 py-4">
-        <div>
+<section x-data="navigation()"
+         @scroll.window="navigationSticky = (window.pageYOffset > 20) ? true : false"
+         class="w-full z-10 transition"
+         :class="{
+            'bg-white block fixed top-0 border-b': navigationSticky,
+            'absolute': !navigationSticky
+         }"
+    >
+    <div class="grid grid-cols-3 py-4">
+        <div class="flex justify-center">
             <a href="/">
-                Logo hier
+                <img class="max-h-16 max-w-16" src="/assets/images/logo-pichi.png" />
             </a>
         </div>
-        <nav>
-            <ul class="flex gap-8">
+        <nav class="flex items-center col-span-2">
+            <ul class="flex gap-8 text-white" :class="{ 'text-black': navigationSticky }">
                 <li>
                     <a href="/">
                         Home
@@ -20,4 +27,21 @@
             </ul>
         </nav>
     </div>
+    <div class="absolute top-0 right-0 pr-20 pt-6 hidden lg:block">
+        <button class="px-4 py-3 text-white hover:bg-green-800 bg-green-700 rounded-md font-bold transition">
+            Klik voor een ontspannen wandeling voor uw hond
+        </button>
+    </div>
 </section>
+
+<script>
+    /**
+     * Alpine navigation object
+     * @returns {Object}
+    */
+    function navigation() {
+        return {
+            navigationSticky: false
+        }
+    }
+</script>
