@@ -12,6 +12,15 @@
     font-style: normal;
 }
 
+.splide__pagination__page {
+    background: #666;
+
+}
+
+.splide__pagination__page.is-active {
+    background: #333;
+}
+
 .font-ahsing {
     font-family: 'Ahsing';
 }

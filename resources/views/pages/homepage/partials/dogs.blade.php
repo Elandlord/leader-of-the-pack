@@ -56,7 +56,7 @@
                         <div class="text-lotp-blue-500 font-bold">
                             {{ $dog->name }} <span class="font-medium">({{ $dog->breed }})</span>
                         </div>
-                        <div class="text-slate-700">
+                        <div class="text-slate-500">
                             Geboren in {{ $dog->birthyear }}
                         </div>
                     </figcaption>
