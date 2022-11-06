@@ -1,20 +1,20 @@
 <section class="overflow-hidden relative bg-center bg-no-repeat bg-cover"
          style="background-image: url('/assets/images/forest-banner.png');">
     <div class="container mx-auto my-32 md:my-60">
-        <div class="text-white row animate__animated animate__fadeInLeft">
+        <div class="text-white row animate__animated animate__fadeInLeft wow">
             <div class="text-center">
-                <h1 class="text-3xl mb-4 font-bold lg:text-5xl text-green-700">
+                <h1 class="text-4xl mb-4 lg:text-5xl text-lotp-blue-500 font-ahsing tracking-widest">
                     Hondenuitlaatservice
                 </h1>
-                <h2 class="mb-4 text-2xl">
+                <h2 class="mb-4 text-3xl">
                     Leader of the Pack
                 </h2>
-                <p class="mt-4 text-xl">
+                <p class="mt-4 text-xl font-medium">
                     Biedt prachtige wandelingen aan voor uw hond in Beetsterzwaag en omgeving!
                 </p>
             </div>
             <div class="flex gap-x-8 justify-center items-center mt-8">
-                <button class="px-4 py-3 text-white hover:bg-green-800 bg-green-700 rounded-md font-bold transition">
+                <button class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
                     Neem contact op
                 </button>
 

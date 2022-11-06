@@ -25,7 +25,7 @@
 
 <section class="container py-8 mx-auto">
     <div class="flex justify-center my-12">
-        <h3 class="font-bold text-3xl">Tarieven</h3>
+        <h3 class="font-bold font-ahsing tracking-wider text-4xl">Tarieven</h3>
     </div>
     <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
         @forelse ($packages as $package)
@@ -37,7 +37,12 @@
                 set expanded(value) {
                     this.active = value ? this.id : null
                 },
-            }" role="region" class="rounded-lg bg-slate-100 shadow">
+            }" role="region"@class([
+                    'rounded-lg bg-slate-100 shadow animate__animated wow',
+                    'animate__fadeInLeft' => $loop->odd,
+                    'animate__fadeInRight' => $loop->even,
+                ])
+            >
                 <button
                     x-on:click="expanded = !expanded"
                     :aria-expanded="expanded"
