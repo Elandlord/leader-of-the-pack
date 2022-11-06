@@ -1,6 +1,9 @@
 <section class="container pt-8 mx-auto">
-    <div class="flex justify-center my-12">
-        <h3 class="font-bold font-ahsing tracking-wider text-4xl">Reviews</h3>
+    <div class="flex justify-center">
+        <div class="my-12 text-center">
+            <h3 class="font-bold font-ahsing tracking-wider text-4xl">Reviews</h3>
+            <span class="text-lotp-blue-500">Beoordeeld met een gemiddelde van {{ rand(8,9) }}.{{ rand(0, 9) }}</span>
+        </div>
     </div>
 </section>
 
@@ -12,7 +15,7 @@
             'type' => 'Wandeling',
             'location' => 'Beetsterzwaag',
             'image_url' => '/assets/images/kiara.png',
-            'description' => 'Mijn hond is na een wandeling met Jelle helemaal tot rust gekomen. Jelle is erg begaan met de hond en levert maatwerk.',
+            'description' => 'Top service! Mijn hond en ik zijn tevreden! Zo hond, zo baas.',
             'stars' => 5
         ],
         (object) [
@@ -21,7 +24,7 @@
             'type' => 'Oppas',
             'location' => 'Beetsterzwaag',
             'image_url' => '/assets/images/vegas-thuis.png',
-            'description' => 'Jelle heeft een dag op Vegas gepast. Dat is mij erg goed bevallen. Als ik weer een hondenoppas zoek, weet ik wie ik moet bellen!',
+            'description' => 'Ik heb een energieke hond die veel uit moet. Jelle biedt de uitkomst. Hij is kalm en erg begaan met honden. Wanneer mijn hond thuiskomt van de wandeling is hij altijd blij en lekker uitgeteld!',
             'stars' => 5
         ],
         (object) [
@@ -30,7 +33,7 @@
             'type' => 'Wandeling',
             'location' => 'Beetsterzwaag',
             'image_url' => '/assets/images/kiara.png',
-            'description' => 'Mijn hond is na een wandeling met Jelle helemaal tot rust gekomen. Jelle is erg begaan met de hond en levert maatwerk.',
+            'description' => 'Door mijn onregelmatige diensten kan ik onze Fardau niet altijd uitlaten. Gelukkig kan ze altijd met Jelle en de roedel mee. Elke keer leeft ze helemaal op na een wandeling. Wij zijn erg blij met Jelle. Hij is zo lief voor onze Fardau!',
             'stars' => 5
         ],
         (object) [
@@ -39,7 +42,7 @@
             'type' => 'Oppas',
             'location' => 'Beetsterzwaag',
             'image_url' => '/assets/images/vegas-thuis.png',
-            'description' => 'Jelle heeft een dag op Vegas gepast. Dat is mij erg goed bevallen. Als ik weer een hondenoppas zoek, weet ik wie ik moet bellen!',
+            'description' => 'Positief, snel en makkelijk contact. Jelle is rustig, straalt liefde voor dieren uit, is betrouwbaar en prettig in de omgang.',
             'stars' => 5
         ],
     ];

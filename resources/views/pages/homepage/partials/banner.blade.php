@@ -10,7 +10,7 @@
                     Leader of the Pack
                 </h2>
                 <p class="mt-4 text-xl font-medium">
-                    Biedt prachtige wandelingen aan voor uw hond in Beetsterzwaag en omgeving!
+                    Biedt prachtige wandelingen aan voor je hond in Beetsterzwaag en omgeving!
                 </p>
             </div>
             <div class="flex gap-x-8 justify-center items-center mt-8">

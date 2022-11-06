@@ -29,7 +29,7 @@
     </div>
     <div class="absolute top-0 right-0 pr-20 pt-6 hidden lg:block">
         <button class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
-            Klik voor een ontspannen wandeling voor uw hond
+            Klik voor een ontspannen wandeling voor je hond
         </button>
     </div>
 </section>
