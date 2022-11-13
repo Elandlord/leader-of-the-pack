@@ -1,10 +1,14 @@
 <?php
 
+use App\Models\Dog;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-//    return view('pages.under-construction');
-    return view('pages.homepage.index');
+    $dogs = Dog::all();
+
+    return view('pages.homepage.index', [
+        'dogs' => $dogs
+    ]);
 });
 
 Route::get('/over-mij', function () {
