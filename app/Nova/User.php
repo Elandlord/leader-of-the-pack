@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Models\User as UserModel;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
@@ -15,7 +16,23 @@ class User extends Resource
      *
      * @var string
      */
-    public static $model = \App\Models\User::class;
+    public static $model = UserModel::class;
+
+    /**
+     * @inheritDoc
+     */
+    public static function label(): string
+    {
+        return 'Gebruikers';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public static function singularLabel(): string
+    {
+        return 'Gebruiker';
+    }
 
     /**
      * The single value that should be used to represent the resource when being displayed.

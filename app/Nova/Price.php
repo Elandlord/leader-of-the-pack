@@ -2,8 +2,12 @@
 
 namespace App\Nova;
 
+use App\Models\Price as PriceModel;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Price extends Resource
@@ -13,14 +17,30 @@ class Price extends Resource
      *
      * @var string
      */
-    public static $model = \App\Models\Price::class;
+    public static $model = PriceModel::class;
+
+    /**
+     * @inheritDoc
+     */
+    public static function singularLabel(): string
+    {
+        return 'Tarief';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public static function label(): string
+    {
+        return 'Tarieven';
+    }
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -28,26 +48,39 @@ class Price extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
+        'description',
+        'costs',
     ];
 
     /**
      * Get the fields displayed by the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return array
      */
     public function fields(Request $request)
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+            Text::make('Pakketnaam', 'name')
+                ->help('Vul hier de naam van het pakket in, bijvoorbeeld: 1 hond, losse wandeling.')
+                ->required()
+                ->rules('required'),
+            Textarea::make('Beschrijving', 'description')
+                ->help('Vul hier de beschrijving in, bijvoorbeeld: 10 uren naar wens te besteden. 2 honden van hetzelfde adres. 4 maanden geldig.')
+                ->nullable(),
+            Currency::make('Kosten', 'costs')
+                ->help('Vul hier het totaalbedrag in van het pakket.')
+                ->required()
+                ->rules('required')
         ];
     }
 
     /**
      * Get the cards available for the request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return array
      */
     public function cards(Request $request)
@@ -58,7 +91,7 @@ class Price extends Resource
     /**
      * Get the filters available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return array
      */
     public function filters(Request $request)
@@ -69,7 +102,7 @@ class Price extends Resource
     /**
      * Get the lenses available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return array
      */
     public function lenses(Request $request)
@@ -80,7 +113,7 @@ class Price extends Resource
     /**
      * Get the actions available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return array
      */
     public function actions(Request $request)

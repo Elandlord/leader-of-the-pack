@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('rating');
             $table->text('text')->nullable();
             $table->string('location', 255)->nullable();
+            $table->string('type', 255)->nullable();
             $table->unsignedInteger('dog_id')->nullable();
 
             $table->timestamps();

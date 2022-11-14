@@ -15,6 +15,7 @@ class Review extends Model
         'rating',
         'text',
         'location',
+        'type',
         'dog_id',
     ];
 
