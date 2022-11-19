@@ -22,7 +22,7 @@
             </p>
 
             <p class="pb-8">
-                Download <a target="_blank" class="text-cyan-500 underline" href="/assets/files/uitlaattarieven.pdf">hier</a> alvast de tarieven.
+                Download <a target="_blank" class="text-cyan-500 underline" href="/assets/files/uitlaattarieven-2022.pdf">hier</a> alvast de tarieven.
             </p>
 
             <div class="pb-4">
