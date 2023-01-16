@@ -15,6 +15,10 @@
                     <p class="mt-4 text-xl font-medium">
                         {{ $page->sections()->first()->flexible_content['text_block'][1] }}
                     </p>
+
+                    <div class="flex justify-center mt-8">
+                        <img src="/assets/images/jelle-banner.png" class="w-full md:w-2/5" />
+                    </div>
                 </div>
             </div>
         </div>
