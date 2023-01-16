@@ -33,7 +33,7 @@
                     <div class="flex gap-x-4 items-center justify-center">
                         <img src="/assets/icons/man-with-dog.png" alt="Man met hond" />
                         <h2 class="font-normal">{{ $price->name }} </h2>
-                        <span class="font-bold">({{ $price->costs }})</span>
+                        <span class="font-bold">(&euro;{{ $price->costs }})</span>
                     </div>
                     <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
                     <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
