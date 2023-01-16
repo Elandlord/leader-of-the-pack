@@ -31,7 +31,10 @@
                     class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
                 >
                     <div class="flex gap-x-4 items-center justify-center">
-                        <img src="/assets/icons/man-with-dog.png" alt="Man met hond" />
+                        <img src="/assets/icons/{{ $price->icon }}.png"
+                             class="object-cover"
+                             style="height: 75px; width: 100px;"
+                             alt="Man met hond" />
                         <h2 class="font-normal">{{ $price->name }} </h2>
                         <span class="font-bold">(&euro;{{ $price->costs }})</span>
                     </div>
