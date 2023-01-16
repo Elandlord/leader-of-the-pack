@@ -13,7 +13,11 @@
             </a>
         </div>
         <nav class="flex items-center col-span-2">
-            <ul class="flex gap-8 text-white" :class="{ 'text-black': navigationSticky }">
+            <ul class="text-white flex gap-8"
+                :class="{
+                    'text-black': navigationSticky || window.location.pathname !== '/',
+                }"
+            >
                 <li>
                     <a href="/">
                         Home
@@ -24,13 +28,18 @@
                         Over mij
                     </a>
                 </li>
+                <li>
+                    <a href="/contact">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
     <div class="absolute top-0 right-0 pr-20 pt-6 hidden lg:block">
-        <button class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
+        <a href="/contact" class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
             Klik voor een ontspannen wandeling voor je hond
-        </button>
+        </a>
     </div>
 </section>
 

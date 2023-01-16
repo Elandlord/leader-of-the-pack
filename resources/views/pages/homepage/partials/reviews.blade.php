@@ -1,7 +1,9 @@
 <section class="container pt-8 mx-auto">
     <div class="flex justify-center">
         <div class="my-12 text-center">
-            <h3 class="font-bold font-ahsing tracking-wider text-4xl">Reviews</h3>
+            <h3 class="font-bold font-ahsing tracking-wider text-4xl">
+                {{ $page->sections->get(4)->flexible_title }}
+            </h3>
 
             @if ($reviews->count() > 0)
                 <span class="text-lotp-blue-500">Beoordeeld met een {{ round($reviews->avg('rating'), 1) * 2 }} ({{ $reviews->count() }} reviews)</span>

@@ -1,6 +1,8 @@
 <section class="container py-8 mx-auto">
     <div class="flex justify-center my-12">
-        <h3 class="font-bold font-ahsing tracking-wider text-4xl">Tarieven</h3>
+        <h3 class="font-bold font-ahsing tracking-wider text-4xl">
+            {{ $page->sections->get(2)->flexible_title }}
+        </h3>
     </div>
     <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
         @forelse ($prices as $price)

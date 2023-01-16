@@ -4,22 +4,24 @@
         <div class="text-white row animate__animated animate__fadeInLeft wow">
             <div class="text-center">
                 <h1 class="text-4xl mb-4 lg:text-5xl text-lotp-blue-500 font-ahsing tracking-widest">
-                    Hondenuitlaatservice
+                    {{ $page->sections->first()->flexible_title[0] ?? '' }}
                 </h1>
                 <h2 class="mb-4 text-3xl">
-                    Leader of the Pack
+                    {{ $page->sections->first()->flexible_title[1] ?? '' }}
                 </h2>
                 <p class="mt-4 text-xl font-medium">
-                    Biedt prachtige wandelingen aan voor je hond in Beetsterzwaag en omgeving!
+                    {{ $page->sections->first()->flexible_text_block ?? ''}}
                 </p>
             </div>
             <div class="flex gap-x-8 justify-center items-center mt-8">
-                <button class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
-                    Neem contact op
-                </button>
+                <a href="{{ $page->sections->first()->flexible_button[0]['url'] }}"
+                   class="px-4 py-3 text-white hover:bg-lotp-blue-600 bg-lotp-blue-500 rounded-md font-bold transition">
+                    {{ $page->sections->first()->flexible_button[0]['button'] }}
+                </a>
 
-                <a class="underline font-bold" href="/over-mij">
-                    Meer over mij
+                <a href="{{ $page->sections->first()->flexible_button[1]['url'] }}"
+                    class="underline font-bold" href="/over-mij">
+                    {{ $page->sections->first()->flexible_button[1]['button'] }}
                 </a>
             </div>
         </div>

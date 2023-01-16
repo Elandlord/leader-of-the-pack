@@ -25,5 +25,11 @@ class PageTableSeeder extends Seeder
             'title' => 'About',
             'route_name' => 'pages.about'
         ]);
+
+        $contactPage = Page::create([
+            'name' => 'Contact',
+            'title' => 'Contact',
+            'route_name' => 'pages.contact'
+        ]);
     }
 }
