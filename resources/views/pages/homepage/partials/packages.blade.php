@@ -1,8 +1,13 @@
 <section class="container py-8 mx-auto">
-    <div class="flex justify-center my-12">
+    <div class="flex justify-center mt-12 mb-4">
         <h3 class="font-bold font-ahsing tracking-wider text-4xl">
             {{ $page->sections->get(2)->flexible_title }}
         </h3>
+    </div>
+    <div class="flex justify-center mb-12">
+        <a class="text-center underline text-lotp-blue-500"
+           target="_blank"
+           href="/assets/files/uitlaattarieven-2022.pdf">Tarievenlijst download</a>
     </div>
     <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
         @forelse ($prices as $price)

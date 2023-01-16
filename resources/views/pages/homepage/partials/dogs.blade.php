@@ -5,39 +5,6 @@
         </h3>
     </div>
 
-    <?php
-//        $dogs = [
-//            (object) [
-//                'name' => 'Vegas',
-//                'description' => 'Vegas is een onwijs lieve hond met een behoefte aan duidelijkheid. Vegas is intelligent, maar soms was onafhankelijk en koppig. Siberische Husky\'s zijn dol op het gezelschap van mensen.',
-//                'breed' => 'Husky',
-//                'birthyear' => 2019,
-//                'image_url' => '/assets/images/vegas-thuis.png',
-//            ],
-//            (object) [
-//                'name' => 'Kiara',
-//                'description' => 'Een echte dame met koppige trekjes. Zo laat ze duidelijk merken als ze genoeg heeft gehad van een wandeling. In tegenstelling tot andere honden, houdt ze niet erg van regen.',
-//                'breed' => 'Schotse Collie',
-//                'birthyear' => 2008,
-//                'image_url' => '/assets/images/kiara.png',
-//            ],
-//            (object) [
-//                'name' => 'Vegas',
-//                'description' => 'Vegas is een onwijs lieve hond met een behoefte aan duidelijkheid. Vegas is intelligent, maar soms was onafhankelijk en koppig. Siberische Husky\'s zijn dol op het gezelschap van mensen.',
-//                'breed' => 'Husky',
-//                'birthyear' => 2019,
-//                'image_url' => '/assets/images/vegas-thuis.png',
-//            ],
-//            (object) [
-//                'name' => 'Kiara',
-//                'description' => 'Een echte dame met koppige trekjes. Zo laat ze duidelijk merken als ze genoeg heeft gehad van een wandeling. In tegenstelling tot andere honden, houdt ze niet erg van regen.',
-//                'breed' => 'Schotse Collie',
-//                'birthyear' => 2008,
-//                'image_url' => '/assets/images/kiara.png',
-//            ],
-//        ];
-//    ?>
-
     <div class="mt-6 grid gap-8 grid-cols-1 md:grid-cols-2">
         @forelse($dogs as $dog)
             <figure
