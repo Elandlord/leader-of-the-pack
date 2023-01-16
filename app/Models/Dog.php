@@ -26,6 +26,10 @@ class Dog extends Model implements HasMedia
      */
     public function getPhotoAttribute()
     {
+        if ($this->getMedia('dog_photo')->count() === 0) {
+            return null;
+        }
+
         $image = $this->getMedia('dog_photo')->first()->getUrl();
 
         if (empty($image)) {
