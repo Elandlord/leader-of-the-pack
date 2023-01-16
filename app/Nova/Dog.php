@@ -68,7 +68,8 @@ class Dog extends Resource
 
         $possibleBirthYears = range($currentYear - 30, $currentYear);
         $possibleBirthYears[] = '';
-
+        $possibleBirthYears = collect(array_reverse($possibleBirthYears))
+            ->mapWithKeys(fn($item, $key) => [$item => $item]);
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Naam van de hond', 'name')
@@ -84,7 +85,7 @@ class Dog extends Resource
                 ->nullable()
                 ->help('Selecteer het geboortejaar. Indien niet bekend, laat het veld dan leeg.')
                 ->displayUsingLabels()
-                ->options(array_reverse($possibleBirthYears)),
+                ->options($possibleBirthYears),
             Images::make('Foto van hond', 'dog_photo')
                 ->conversionOnIndexView('thumb')
         ];
