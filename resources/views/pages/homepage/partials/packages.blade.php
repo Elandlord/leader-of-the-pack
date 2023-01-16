@@ -1,52 +1,45 @@
-@php
-    $packages = [
-        (object) [
-            'title' => '1 HOND LOSSE WANDELING',
-            'description' => 'In overleg privé of groepswandeling mogelijk.',
-            'price' => '€12,50'
-        ],
-        (object) [
-            'title' => '1 HOND STRIPPENKAART',
-            'description' => '10 uren naar wens te besteden. De strippenkaart is 4 maanden geldig.',
-            'price' => '€105'
-        ],
-        (object) [
-            'title' => '2 HONDEN LOSSE WANDELING',
-            'description' => 'Geldig wanneer twee honden opgehaald worden van één adres.',
-            'price' => '€21'
-        ],
-        (object) [
-            'title' => '2 HONDEN STRIPPENKAART',
-            'description' => '10 uren naar wens te besteden. 2 honden van hetzelfde adres. 4 maanden geldig.',
-            'price' => '€185'
-        ],
-    ];
-@endphp
-
 <section class="container py-8 mx-auto">
     <div class="flex justify-center my-12">
-        <h3 class="font-bold text-3xl">Tarieven</h3>
+        <h3 class="font-bold font-ahsing tracking-wider text-4xl">
+            {{ $page->sections->get(2)->flexible_title }}
+        </h3>
     </div>
-    <div class="grid gap-x-8 grid-cols-1 lg:grid-cols-4">
-        @forelse ($packages as $package)
-            <div class="overflow-hidden bg-white shadow sm:rounded-lg">
-                <div class="px-4 py-5 sm:px-6">
-                    <div class="flex justify-center my-4">
+    <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
+        @forelse ($prices as $price)
+            <div x-data="{
+                id: {{ $loop->iteration }},
+                get expanded() {
+                    return this.active === this.id
+                },
+                set expanded(value) {
+                    this.active = value ? this.id : null
+                },
+            }" role="region"@class([
+                    'rounded-lg bg-slate-100 shadow animate__animated wow',
+                    'animate__fadeInLeft' => $loop->odd,
+                    'animate__fadeInRight' => $loop->even,
+                ])
+            >
+                <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+                >
+                    <div class="flex gap-x-4 items-center justify-center">
                         <img src="/assets/icons/man-with-dog.png" alt="Man met hond" />
+                        <h2 class="font-normal">{{ $price->name }} </h2>
+                        <span class="font-bold">({{ $price->costs }})</span>
                     </div>
-                    <h3 class="text-lg font-medium leading-6 text-center text-gray-900">
-                        {{ $package->title }}
-                    </h3>
-                    <p class="mt-1 max-w-2xl text-sm text-center text-gray-500">
-                        {{ $package->description }}
-                    </p>
-                    <h3 class="pt-4 text-3xl font-bold text-center">
-                        {{    $package->price }}
-                    </h3>
+                    <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                </button>
+
+                <div x-show="expanded" x-collapse>
+                    <div class="px-6 pb-4">{{ $price->description }}</div>
                 </div>
             </div>
         @empty
-            Geen pakketten gevonden.
+            Geen prijzen gevonden.
         @endforelse
     </div>
 </section>

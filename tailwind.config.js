@@ -5,10 +5,17 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'lotp-blue': {
+                    '500': '#2C84BF',
+                    '600': '#2677AD'
+                }
+            }
+        },
         fontFamily: {
-            sans: ['Nunito', 'sans-serif'],
-            heading: ['Nunito', 'sans-serif']
+            sans: ['Bree Serif', 'sans-serif'],
+            heading: ['Ahsing', 'sans-serif']
         }
     },
     plugins: [],

@@ -1,12 +1,8 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.under-construction');
-//    return view('pages.homepage.index');
-});
-
-Route::get('/over-mij', function () {
-    return view('pages.about.index');
-});
+Route::get('/', [PageController::class, 'homepage'])->name('pages.home');
+Route::get('/over-mij', [PageController::class, 'about'])->name('pages.about');
+Route::get('/contact', [PageController::class, 'contact'])->name('pages.contact');
