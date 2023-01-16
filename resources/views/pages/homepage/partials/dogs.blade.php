@@ -15,7 +15,7 @@
                 ])
             >
                 @if ($dog->photo !== null)
-                    <img class="w-60 h-60 object-cover object-center rounded-full mx-auto" src="{{ $dog->photo }}" alt="" width="384" height="512">
+                    <img class="w-60 h-60 object-cover object-center rounded-full mx-auto shadow-md border-8 border-white" src="{{ $dog->photo }}" alt="" width="384" height="512">
                 @endif
                 <div class="pt-6 text-center space-y-4">
                     <blockquote>
