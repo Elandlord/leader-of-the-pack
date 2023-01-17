@@ -18,7 +18,9 @@ class PageController extends Controller
      */
     public function homepage(): View
     {
-        $dogs = Dog::all();
+        $dogs = Dog::inRandomOrder()
+            ->get()
+            ->append('photo');
         $prices = Price::all();
         $reviews = Review::all();
         $reasons = Reason::all();
