@@ -7,7 +7,7 @@
 
     <div x-data="{
             dogs: {{ $dogs }},
-            maxItems: 1,
+            maxItems: 4,
 
             get paginatedDogs() {
                 return this.dogs.filter((dog, index) => index < this.maxItems);
