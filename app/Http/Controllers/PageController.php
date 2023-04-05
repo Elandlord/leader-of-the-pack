@@ -21,14 +21,12 @@ class PageController extends Controller
         $dogs = Dog::inRandomOrder()
             ->get()
             ->append('photo');
-        $prices = Price::all();
         $reviews = Review::all();
         $reasons = Reason::all();
         $page = Page::firstWhere('title', 'homepage');
 
         return view('pages.homepage.index', [
             'dogs' => $dogs,
-            'prices' => $prices,
             'reviews' => $reviews,
             'reasons' => $reasons,
             'page' => $page
@@ -58,6 +56,17 @@ class PageController extends Controller
 
         return view('pages.contact.index', [
             'page' => $page
+        ]);
+    }
+
+    public function pricing(): View
+    {
+        $prices = Price::all();
+        $page = Page::firstWhere('title', 'pricing');
+
+        return view('pages.pricing.index', [
+            'page' => $page,
+            'prices' => $prices,
         ]);
     }
 }

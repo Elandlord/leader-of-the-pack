@@ -2,7 +2,7 @@
     <div class="flex justify-center">
         <div class="my-12 text-center">
             <h3 class="font-bold font-ahsing tracking-wider text-4xl">
-                {{ $page->sections->get(4)->flexible_title }}
+                {{ $page->sections->get(3)->flexible_title }}
             </h3>
 
             @if ($reviews->count() > 0)

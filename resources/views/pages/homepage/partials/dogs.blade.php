@@ -1,7 +1,7 @@
 <section class="container py-8 mx-auto">
     <div class="flex justify-center my-12">
         <h3 class="font-bold font-ahsing tracking-wider text-4xl">
-            {{ $page->sections->get(3)->flexible_title }}
+            {{ $page->sections->get(2)->flexible_title }}
         </h3>
     </div>
 

@@ -6,6 +6,7 @@ use App\Models\Price as PriceModel;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -72,6 +73,15 @@ class Price extends Resource
                 ->nullable(),
             Currency::make('Kosten', 'costs')
                 ->help('Vul hier het totaalbedrag in van het pakket.')
+                ->required()
+                ->rules('required'),
+            Select::make('Type', 'type')
+                ->options([
+                    'Walks' => 'Wandeling',
+                    'Daycare' => 'Oppas'
+                ])
+                ->displayUsingLabels()
+                ->help('Selecteer hier het tarieftype')
                 ->required()
                 ->rules('required')
         ];

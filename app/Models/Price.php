@@ -14,6 +14,7 @@ class Price extends Model
         'name',
         'description',
         'costs',
+        'type'
     ];
 
     /**

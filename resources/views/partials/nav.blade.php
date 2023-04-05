@@ -24,6 +24,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/tarieven">
+                        Tarieven
+                    </a>
+                </li>
+                <li>
                     <a href="/over-mij">
                         Over mij
                     </a>
