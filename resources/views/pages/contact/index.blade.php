@@ -52,7 +52,7 @@
                             </div>
                             <div class="flex-1">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.2515623087575!2d6.074790215828026!3d53.069754179921944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c8500f2012f8c1%3A0x5b87e8830b0d6456!2sUtein%2081%2C%209244%20AA%20Beetsterzwaag!5e0!3m2!1snl!2snl!4v1673885534799!5m2!1snl!2snl"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.3786245134515!2d6.076545875911648!3d53.06747149555402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c85008a4e9e6e5%3A0xeb6177cd5749cb0!2sUtgong%2037%2C%209244%20HE%20Beetsterzwaag!5e0!3m2!1snl!2snl!4v1689599060642!5m2!1snl!2snl"
                                     class="h-full w-full" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
