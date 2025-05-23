@@ -2,7 +2,7 @@
     $types = ['Walks', 'Daycare'];
 @endphp
 
-@forelse(range(0, 1) as $index)
+@forelse(range(0, count($types) - 1) as $index)
     <section class="container py-8 mx-auto">
         <div class="flex justify-center mt-12 mb-4">
             <h3 class="font-bold font-ahsing tracking-wider text-4xl">
