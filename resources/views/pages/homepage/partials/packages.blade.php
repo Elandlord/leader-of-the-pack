@@ -1,5 +1,5 @@
 @php
-    $types = ['Walks', 'Daycare'];
+    $types = ['Walks'];
 @endphp
 
 @forelse(range(0, count($types) - 1) as $index)
