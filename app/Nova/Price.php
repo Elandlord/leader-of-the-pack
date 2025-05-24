@@ -77,8 +77,9 @@ class Price extends Resource
                 ->rules('required'),
             Select::make('Type', 'type')
                 ->options([
-                    'Walks' => 'Wandeling',
-                    'Daycare' => 'Oppas'
+                    'Local Walks' => 'Wandeling (in Beetsterzwaag incl. ophalen)',
+                    'Travel Walks' => 'Wandeling (buiten Beetsterzwaag)',
+                    'Daycare' => 'Oppas',
                 ])
                 ->displayUsingLabels()
                 ->help('Selecteer hier het tarieftype')
