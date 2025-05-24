@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -13,9 +12,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('prices', function (Blueprint $table) {
-            $table->enum('type', ['Local Walks', 'Travel Walks', 'Daycare'])->default('Local Walks')->change();
-        });
+        DB::statement("ALTER TABLE prices MODIFY COLUMN type ENUM('Local Walks', 'Travel Walks', 'Daycare') DEFAULT 'Local Walks'");
     }
 
     /**
@@ -25,8 +22,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('prices', function (Blueprint $table) {
-            $table->enum('type', ['Walks', 'Daycare'])->default('Walks')->change();
-        });
+        DB::statement("ALTER TABLE prices MODIFY COLUMN type ENUM('Walks', 'Daycare') DEFAULT 'Walks'");
     }
 };
