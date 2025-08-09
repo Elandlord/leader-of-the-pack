@@ -9,11 +9,6 @@
                 {{ $page->sections->get($index)->flexible_title }}
             </h3>
         </div>
-        <div class="flex justify-center mb-12">
-            <a class="text-center underline text-lotp-blue-500"
-               target="_blank"
-               href="/assets/files/uitlaattarieven-2022.pdf">Tarievenlijst download</a>
-        </div>
         <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
             @forelse ($prices->where('type', $types[$index]) as $price)
                 <div x-data="{
