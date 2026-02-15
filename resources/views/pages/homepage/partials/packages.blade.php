@@ -1,13 +1,18 @@
 @php
-    $types = ['Local Walks', 'Travel Walks'];
+    $types = ['Local Walks'];
 @endphp
 
 @forelse(range(0, count($types) - 1) as $index)
     <section class="container py-8 mx-auto">
         <div class="flex justify-center mt-12 mb-4">
-            <h3 class="font-bold font-ahsing tracking-wider text-4xl">
-                {{ $page->sections->get($index)->flexible_title }}
-            </h3>
+            <div class="text-center">
+                <h3 class="font-bold font-ahsing tracking-wider text-4xl">
+                    {{ $page->sections->get($index)->flexible_title }}
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                    Alle tarieven zijn voor wandelingen in Beetsterzwaag.
+                </p>
+            </div>
         </div>
         <div x-data="{ active: 0 }" class="grid gap-8 grid-cols-1 lg:grid-cols-2">
             @forelse ($prices->where('type', $types[$index]) as $price)
@@ -54,4 +59,3 @@
 @empty
 
 @endforelse
-
