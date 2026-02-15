@@ -10,7 +10,7 @@ class ServiceAreaContentTest extends TestCase
     {
         $template = file_get_contents(resource_path('views/pages/homepage/partials/packages.blade.php'));
 
-        $this->assertStringContainsString("$types = ['Local Walks'];", $template);
+        $this->assertStringContainsString("\$types = ['Local Walks'];", $template);
         $this->assertStringNotContainsString('Travel Walks', $template);
         $this->assertStringContainsString('Alle tarieven zijn voor wandelingen in Beetsterzwaag.', $template);
     }
