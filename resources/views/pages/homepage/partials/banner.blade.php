@@ -12,6 +12,9 @@
                 <p class="mt-4 text-xl font-medium">
                     {{ $page->sections->first()->flexible_text_block ?? ''}}
                 </p>
+                <p class="mt-4 text-lg font-semibold text-lotp-blue-500">
+                    Ik ben alleen beschikbaar voor honden in Beetsterzwaag.
+                </p>
             </div>
             <div class="flex gap-x-8 justify-center items-center mt-8">
                 <a href="{{ $page->sections->first()->flexible_button[0]['url'] }}"

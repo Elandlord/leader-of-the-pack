@@ -13,6 +13,9 @@
                         <p class="mt-4 text-xl font-medium">
                             {{ $page->sections->first()->flexible_text_block }}
                         </p>
+                        <p class="mt-4 text-lg font-semibold text-lotp-blue-500">
+                            Werkgebied: alleen Beetsterzwaag.
+                        </p>
 
                         <div class="flex flex-col lg:flex-row align-items-stretch justify-center w-full pt-8 shadow-lg ">
                             <div class="overflow-hidden bg-white rounded lg:max-w-xs w-full leading-normal">
