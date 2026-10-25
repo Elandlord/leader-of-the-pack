@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Filament\Resources\Pages\Pages;
+
+use App\Filament\Resources\Pages\PageResource;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Resources\Pages\ViewRecord;
+
+class ViewPage extends ViewRecord
+{
+    protected static string $resource = PageResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            EditAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
+        ];
+    }
+}
