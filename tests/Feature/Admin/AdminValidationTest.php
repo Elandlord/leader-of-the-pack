@@ -11,25 +11,21 @@ use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Filament\Resources\Users\Pages\EditUser;
 use App\Models\User;
 use Filament\Facades\Filament;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Livewire\Livewire;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class AdminValidationTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $admin = User::query()->firstOrCreate(
-            ['email' => 'info@leader-of-the-pack.nl'],
-            ['name' => 'Test admin', 'password' => Hash::make(Str::random(32))],
-        );
+        $admin = User::factory()->create(['email' => 'info@leader-of-the-pack.nl']);
 
         $this->actingAs($admin);
         Filament::setCurrentPanel('admin');

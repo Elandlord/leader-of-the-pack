@@ -4,14 +4,14 @@ namespace Tests\Feature\Admin;
 
 use App\Models\User;
 use Filament\Auth\Pages\Login;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;
 use Tests\TestCase;
 
 class AdminAccessTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     protected const WHITELISTED_EMAIL = 'info@leader-of-the-pack.nl';
 
@@ -92,12 +92,9 @@ class AdminAccessTest extends TestCase
 
     protected function whitelistedUser(): User
     {
-        $user = User::query()->firstOrNew(['email' => self::WHITELISTED_EMAIL]);
-        $user->forceFill([
-            'name' => $user->name ?? 'Test admin',
+        return User::factory()->create([
+            'email' => self::WHITELISTED_EMAIL,
             'password' => Hash::make(self::PASSWORD),
-        ])->save();
-
-        return $user;
+        ]);
     }
 }
