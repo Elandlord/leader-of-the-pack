@@ -18,6 +18,10 @@ class Section extends Model
         'content',
     ];
 
+    protected $casts = [
+        'content' => 'array',
+    ];
+
     public function sectionable()
     {
         return $this->morphTo();

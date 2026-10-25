@@ -30,9 +30,8 @@ class PageFlexibleLinksTest extends TestCase
         // Arrange
         $this->page->links = json_encode([
             [
-                'layout' => self::LAYOUT_NAME,
-                'key' => 'k1',
-                'attributes' => self::LAYOUT_ATTRIBUTES,
+                'type' => self::LAYOUT_NAME,
+                'data' => self::LAYOUT_ATTRIBUTES,
             ],
         ]);
 

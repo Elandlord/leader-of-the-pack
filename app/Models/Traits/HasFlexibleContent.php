@@ -18,7 +18,7 @@ trait HasFlexibleContent
         }
 
         return (new Collection($value))
-            ->filter(fn (mixed $item) => is_array($item) && isset($item['layout']))
-            ->map(fn (array $item) => new FlexibleLayout($item['layout'], (array) ($item['attributes'] ?? [])));
+            ->filter(fn (mixed $item) => is_array($item) && isset($item['type']))
+            ->map(fn (array $item) => new FlexibleLayout($item['type'], (array) ($item['data'] ?? [])));
     }
 }

@@ -27,6 +27,10 @@ class Page extends Model implements HasMedia
         'show_in_search_results',
     ];
 
+    protected $casts = [
+        'links' => 'array',
+    ];
+
     public function getFlexibleLinksAttribute()
     {
         return $this->toFlexible($this->links);
