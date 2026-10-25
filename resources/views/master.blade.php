@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="flex flex-col" style="min-height: 100vh">
     @include('partials.nav')
-    @yield('content')
+    <main class="flex-1">
+        @yield('content')
+    </main>
     @include('partials.footer')
     @include('partials.floating-action-button')
 
