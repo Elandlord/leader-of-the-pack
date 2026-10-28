@@ -2,20 +2,24 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasFlexibleContent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
 
 class Section extends Model
 {
     use SoftDeletes;
-    use HasFlexible;
+    use HasFlexibleContent;
 
     protected $fillable = [
         'sectionable_id',
         'sectionable_type',
         'content',
+    ];
+
+    protected $casts = [
+        'content' => 'array',
     ];
 
     public function sectionable()

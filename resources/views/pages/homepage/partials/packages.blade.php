@@ -3,12 +3,12 @@
 @endphp
 
 @forelse(range(0, count($types) - 1) as $index)
-    <section class="container py-8 mx-auto">
-        <div class="flex justify-center mt-12 mb-4">
+    <section class="container mx-auto my-32 md:my-60">
+        <div class="flex justify-center mb-4">
             <div class="text-center">
-                <h3 class="font-bold font-ahsing tracking-wider text-4xl">
+                <h1 class="text-4xl mb-4 lg:text-5xl text-lotp-blue-500 font-ahsing tracking-widest">
                     {{ $page->sections->get($index)->flexible_title }}
-                </h3>
+                </h1>
                 <p class="mt-2 text-sm text-slate-600">
                     Alle tarieven zijn voor wandelingen in Beetsterzwaag.
                 </p>

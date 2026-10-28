@@ -109,9 +109,8 @@ class SectionFlexibleContentTest extends TestCase
     protected function layout(string $name, array $attributes): array
     {
         return [
-            'layout' => $name,
-            'key' => str_pad($name, 16, 'x'),
-            'attributes' => $attributes,
+            'type' => $name,
+            'data' => $attributes,
         ];
     }
 }

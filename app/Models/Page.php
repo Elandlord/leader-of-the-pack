@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasFlexibleContent;
 use App\Models\Traits\MetaTaggable;
 use App\Models\Traits\Sectionable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
 
 class Page extends Model implements HasMedia
 {
@@ -17,7 +17,7 @@ class Page extends Model implements HasMedia
     use SoftDeletes;
     use Sectionable;
     use MetaTaggable;
-    use HasFlexible;
+    use HasFlexibleContent;
 
     protected $fillable = [
         'name',
@@ -25,6 +25,10 @@ class Page extends Model implements HasMedia
         'route_name',
         'links',
         'show_in_search_results',
+    ];
+
+    protected $casts = [
+        'links' => 'array',
     ];
 
     public function getFlexibleLinksAttribute()
